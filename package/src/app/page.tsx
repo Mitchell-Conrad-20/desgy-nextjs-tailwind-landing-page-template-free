@@ -14,9 +14,11 @@ import Articles from '@/app/components/Home/Articles'
 import Join from '@/app/components/Home/Joinus'
 import Insta from '@/app/components/Home/Insta'
 import { Metadata } from 'next'
+import { pageMetadata } from '@/app/api/data/pageMetadata'
 
 export const metadata: Metadata = {
-  title: 'Desgy Solutions',
+  title: pageMetadata.title,
+  description: pageMetadata.description,
 }
 
 export default function Home() {
