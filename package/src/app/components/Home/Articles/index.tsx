@@ -15,6 +15,7 @@ const settings = {
   autoplay: false,
   speed: 500,
   cssEase: 'linear',
+  dotsClass: 'articles-slider-dots',
   responsive: [
     {
       breakpoint: 1200,
@@ -65,7 +66,7 @@ const Articles = () => {
           <p className='text-primary text-xl font-normal tracking-widest'>
             ARTICLES
           </p>
-          <h2>Our latest post.</h2>
+          <h2 className='text-black'>Our latest post.</h2>
         </div>
 
         <Slider {...settings}>
@@ -88,13 +89,13 @@ const Articles = () => {
                       className='absolute text-base bg-primary text-white hover:bg-black hover:shadow-xl py-3 px-6 rounded-full top-56 right-11'>
                       {items.time} read
                     </Link>
-                    <h5 className='font-bold pt-6'>{items.heading}</h5>
-                    <h5 className='font-bold pt-1'>{items.heading2}</h5>
+                    <h5 className='font-bold pt-6 text-black'>{items.heading}</h5>
+                    <h5 className='font-bold pt-1 text-black'>{items.heading2}</h5>
                     <div>
-                      <h3 className='text-sm font-normal pt-6 pb-2 text-black/75 dark:text-white/75'>
+                      <h3 className='text-sm font-normal pt-6 pb-2 text-black/75'>
                         {items.name}
                       </h3>
-                      <h3 className='text-sm font-normal pb-1 text-black/75 dark:text-white/75'>
+                      <h3 className='text-sm font-normal pb-1 text-black/75'>
                         {items.date}
                       </h3>
                     </div>

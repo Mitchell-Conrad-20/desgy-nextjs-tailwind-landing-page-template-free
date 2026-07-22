@@ -8,7 +8,7 @@ const Team = () => {
         <h2 className='text-center max-w-5xl mx-auto'>
           Our team belives you deserve only the best.
         </h2>
-        <h5 className='font-medium text-center pt-10 text-black/50 max-w-3xl mx-auto'>
+        <h5 className='font-medium text-center pt-10 text-black/50 dark:text-slate-300 max-w-3xl mx-auto'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor.
         </h5>

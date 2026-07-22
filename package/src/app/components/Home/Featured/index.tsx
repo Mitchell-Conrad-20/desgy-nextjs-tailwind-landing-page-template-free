@@ -11,16 +11,8 @@ function SampleNextArrow(props: { className: any; style: any; onClick: any }) {
   const { className, style, onClick } = props
   return (
     <div
-      className={className}
-      style={{
-        ...style,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        background: 'black',
-        padding: '28px',
-        borderRadius: '20px',
-      }}
+      className={`${className} flex justify-center items-center bg-black dark:bg-white p-7 rounded-[20px]`}
+      style={{ ...style }}
       onClick={onClick}
     />
   )
@@ -30,16 +22,8 @@ function SamplePrevArrow(props: { className: any; style: any; onClick: any }) {
   const { className, style, onClick } = props
   return (
     <div
-      className={className}
-      style={{
-        ...style,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        background: 'black',
-        padding: '28px',
-        borderRadius: '20px',
-      }}
+      className={`${className} flex justify-center items-center bg-black dark:bg-white p-7 rounded-[20px]`}
+      style={{ ...style }}
       onClick={onClick}
     />
   )
@@ -123,7 +107,7 @@ const Featured = () => {
                       className='rounded-2xl'
                     />
                     <div>
-                      <h4 className='max-w-sm font-bold text-center sm:text-start my-6 text-black'>
+                      <h4 className='max-w-sm font-bold text-center sm:text-start my-6 text-black dark:text-white/90'>
                         {items.heading}
                       </h4>
                     </div>

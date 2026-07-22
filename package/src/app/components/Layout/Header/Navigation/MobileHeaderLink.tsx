@@ -14,7 +14,7 @@ const MobileHeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
       <Link
         href={item.href}
         onClick={item.submenu ? handleToggle : undefined}
-        className="flex items-center justify-between w-full py-2 text-white text-muted focus:outline-hidden"
+        className="flex items-center justify-between w-full py-2 text-black/75 dark:text-white focus:outline-hidden"
       >
         {item.label}
         {item.submenu && (
@@ -36,12 +36,12 @@ const MobileHeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
         )}
       </Link>
       {submenuOpen && item.submenu && (
-        <div className="bg-white p-2 w-full">
+        <div className="bg-white dark:bg-darklight p-2 w-full">
           {item.submenu.map((subItem, index) => (
             <Link
               key={index}
               href={subItem.href}
-              className="block py-2 text-gray-500 hover:bg-gray-200"
+              className="block py-2 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-white/5"
             >
               {subItem.label}
             </Link>

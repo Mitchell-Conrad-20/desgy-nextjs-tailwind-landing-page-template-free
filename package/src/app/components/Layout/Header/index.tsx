@@ -10,6 +10,7 @@ import MobileHeaderLink from './Navigation/MobileHeaderLink'
 import Signin from '@/app/components/Auth/SignIn'
 import SignUp from '@/app/components/Auth/SignUp'
 import { Icon } from '@iconify/react/dist/iconify.js'
+import ThemeToggler from './ThemeToggler'
 
 const Header: React.FC = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
@@ -85,8 +86,8 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 z-40 w-full transition-all duration-300 border-b border-black/10 ${
-        sticky ? ' shadow-lg bg-white' : 'shadow-none'
+      className={`fixed top-0 z-40 w-full transition-all duration-300 border-b border-black/10 dark:border-white/10 ${
+        sticky ? ' shadow-lg bg-white dark:bg-slate-900' : 'shadow-none'
       }`}>
       <div className='lg:py-0 py-2'>
         <div className='container mx-auto max-w-(--breakpoint-xl) flex items-center justify-between px-4'>
@@ -105,8 +106,9 @@ const Header: React.FC = () => {
             className={`flex items-center gap-4 pl-16 duration-300 ${
               sticky ? 'py-3' : 'py-7'
             }`}>
+            <ThemeToggler />
             <button
-              className='hidden lg:block bg-transparent text-darkmode border hover:bg-darkmode border-darkmode hover:text-white px-4 py-2 rounded-lg hover:cursor-pointer'
+              className='hidden lg:block bg-transparent text-darkmode dark:text-white dark:border-white border hover:bg-darkmode dark:hover:bg-white/10 border-darkmode hover:text-white dark:hover:text-white px-4 py-2 rounded-lg hover:cursor-pointer'
               onClick={() => {
                 setIsSignInOpen(true)
               }}>
@@ -116,14 +118,14 @@ const Header: React.FC = () => {
               <div className='fixed top-0 left-0 w-full h-full bg-black/50 flex items-center justify-center z-50'>
                 <div
                   ref={signInRef}
-                  className='relative mx-auto w-full max-w-md bg-white overflow-hidden rounded-lg px-8 pt-14 pb-8 text-center bg-dark_grey/90 backdrop-blur-md'>
+                  className='relative mx-auto w-full max-w-md overflow-hidden rounded-lg px-8 pt-14 pb-8 text-center bg-white backdrop-blur-md'>
                   <button
                     onClick={() => setIsSignInOpen(false)}
-                    className='absolute top-0 right-0 mr-8 mt-8 dark:invert'
+                    className='absolute top-0 right-0 mr-8 mt-8'
                     aria-label='Close Sign In Modal'>
                     <Icon
                       icon='tabler:currency-xrp'
-                      className='text-black hover:text-primary text-24 inline-block me-2 cursor-pointer'
+                      className='text-slate-700 hover:text-primary text-24 inline-block me-2 cursor-pointer'
                     />
                   </button>
                   <Signin />
@@ -131,7 +133,7 @@ const Header: React.FC = () => {
               </div>
             )}
             <button
-              className='hidden lg:block bg-darkmode text-white hover:bg-transparent hover:text-darkmode border border-darkmode px-4 py-2 rounded-lg hover:cursor-pointer'
+              className='hidden lg:block bg-darkmode dark:bg-white text-white dark:text-slate-900 hover:bg-transparent dark:hover:bg-transparent hover:text-darkmode dark:hover:text-white border border-darkmode dark:border-white px-4 py-2 rounded-lg hover:cursor-pointer'
               onClick={() => {
                 setIsSignUpOpen(true)
               }}>
@@ -141,14 +143,14 @@ const Header: React.FC = () => {
               <div className='fixed top-0 left-0 w-full h-full bg-black/50 flex items-center justify-center z-50'>
                 <div
                   ref={signUpRef}
-                  className='relative mx-auto w-full max-w-md overflow-hidden bg-white rounded-lg bg-dark_grey/90 backdrop-blur-md px-8 pt-14 pb-8 text-center'>
+                  className='relative mx-auto w-full max-w-md overflow-hidden rounded-lg bg-white backdrop-blur-md px-8 pt-14 pb-8 text-center'>
                   <button
                     onClick={() => setIsSignUpOpen(false)}
-                    className='absolute top-0 right-0 mr-8 mt-8 dark:invert'
+                    className='absolute top-0 right-0 mr-8 mt-8'
                     aria-label='Close Sign Up Modal'>
                     <Icon
                       icon='tabler:currency-xrp'
-                      className='text-black hover:text-primary text-24 inline-block me-2 cursor-pointer'
+                      className='text-slate-700 hover:text-primary text-24 inline-block me-2 cursor-pointer'
                     />
                   </button>
                   <SignUp />
@@ -159,9 +161,9 @@ const Header: React.FC = () => {
               onClick={() => setNavbarOpen(!navbarOpen)}
               className='block lg:hidden p-2 rounded-lg'
               aria-label='Toggle mobile menu'>
-              <span className='block w-6 h-0.5 bg-darkmode'></span>
-              <span className='block w-6 h-0.5 bg-darkmode mt-1.5'></span>
-              <span className='block w-6 h-0.5 bg-darkmode mt-1.5'></span>
+              <span className='block w-6 h-0.5 bg-darkmode dark:bg-white'></span>
+              <span className='block w-6 h-0.5 bg-darkmode dark:bg-white mt-1.5'></span>
+              <span className='block w-6 h-0.5 bg-darkmode dark:bg-white mt-1.5'></span>
             </button>
           </div>
         </div>
@@ -181,8 +183,10 @@ const Header: React.FC = () => {
             {/*  */}
             <button
               onClick={() => setNavbarOpen(false)}
-              className="bg-[url('/images/closed.svg')] bg-no-repeat bg-contain w-5 h-5 absolute top-0 right-0 mr-8 mt-8 dark:invert"
-              aria-label='Close menu Modal'></button>
+              className='absolute top-0 right-0 mr-8 mt-8 text-white hover:text-primary cursor-pointer'
+              aria-label='Close menu Modal'>
+              <Icon icon='tabler:x' className='text-2xl' />
+            </button>
           </div>
           <nav className='flex flex-col items-start p-4'>
             {headerData.map(

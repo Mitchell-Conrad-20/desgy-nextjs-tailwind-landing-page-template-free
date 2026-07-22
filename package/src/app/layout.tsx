@@ -4,6 +4,8 @@ import Header from '@/app/components/Layout/Header'
 import Footer from '@/app/components/Layout/Footer'
 import ScrollToTop from '@/app/components/ScrollToTop'
 import Aoscompo from '@/utils/aos'
+import { ThemeProvider } from 'next-themes'
+
 const font = Manrope({ subsets: ['latin'] })
 
 export default function RootLayout({
@@ -14,12 +16,14 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body className={`${font.className}`}>
-        <Aoscompo>
-          <Header />
-          {children}
-          <Footer />
-        </Aoscompo>
-        <ScrollToTop />
+        <ThemeProvider attribute='class' defaultTheme='light' enableSystem>
+          <Aoscompo>
+            <Header />
+            {children}
+            <Footer />
+          </Aoscompo>
+          <ScrollToTop />
+        </ThemeProvider>
       </body>
     </html>
   )

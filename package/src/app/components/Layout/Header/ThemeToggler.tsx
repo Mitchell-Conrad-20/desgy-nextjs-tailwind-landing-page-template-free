@@ -7,7 +7,7 @@ const ThemeToggler = () => {
     <button
       aria-label="theme toggler"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="text-body-color flex h-8 w-8 items-center justify-center duration-300 dark:text-white"
+      className="text-body-color flex h-8 w-8 items-center justify-center duration-300 dark:text-white hover:cursor-pointer"
     >
       <span>
         <svg

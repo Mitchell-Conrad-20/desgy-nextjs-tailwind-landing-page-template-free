@@ -74,27 +74,27 @@
   }
 
   h1 {
-    @apply text-black text-6xl sm:text-80 font-bold sm:leading-24 leading-20;
+    @apply text-black dark:text-white text-6xl sm:text-80 font-bold sm:leading-24 leading-20;
   }
 
   h2 {
-    @apply text-black text-5xl lg:text-65 font-bold;
+    @apply text-black dark:text-white text-5xl lg:text-65 font-bold;
   }
 
   h3 {
-    @apply text-black text-4xl lg:text-6xl font-semibold;
+    @apply text-black dark:text-white text-4xl lg:text-6xl font-semibold;
   }
 
   h4 {
-    @apply text-black text-3xl lg:text-4xl font-semibold;
+    @apply text-black dark:text-white text-3xl lg:text-4xl font-semibold;
   }
 
   h5 {
-    @apply text-black text-2xl font-semibold;
+    @apply text-black dark:text-white text-2xl font-semibold;
   }
 
   h6 {
-    @apply text-black text-xl;
+    @apply text-black dark:text-white text-xl;
   }
 }
 
@@ -103,9 +103,36 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  @apply dark:bg-slate-900 dark:text-white;
+}
+
 .bg-joinus {
   background-image: url('/images/joinus/horn.svg'),
     url('/images/joinus/paint.svg');
   background-repeat: no-repeat, no-repeat;
   background-position: 90% 100%, 2% 18%;
+}
+
+/* Slick carousel dots/arrow theming for dark mode */
+.slick-dots li button:before {
+  color: rgba(0,0,0,0.6);
+}
+.dark .slick-dots li button:before {
+  color: rgba(255,255,255,0.85);
+}
+
+.articles-slider-dots li button:before {
+  color: rgba(0,0,0,0.6);
+}
+
+.dark .articles-slider-dots li button:before {
+  color: rgba(0,0,0,0.6);
+}
+
+.slick-prev.slick-arrow, .slick-next.slick-arrow {
+  background: rgba(0,0,0,0.85);
+}
+.dark .slick-prev.slick-arrow, .dark .slick-next.slick-arrow {
+  background: rgba(255,255,255,0.08);
 }

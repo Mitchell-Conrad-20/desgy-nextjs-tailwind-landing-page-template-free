@@ -30,7 +30,7 @@ const Aboutus = () => {
   return (
     <section id='About' className=' bg-cover bg-center overflow-hidden'>
       <div className='container mx-auto max-w-7xl px-4 relative z-1'>
-        <div className='p-12 bg-grey rounded-3xl'>
+          <div className='p-12 bg-grey rounded-3xl dark:bg-transparent'>
           <Image
             src='/images/aboutus/dots.svg'
             width={100}
@@ -50,7 +50,7 @@ const Aboutus = () => {
               : about.map((item, i) => (
                   <div
                     key={i}
-                    className='hover:bg-darkmode bg-white rounded-3xl p-8 shadow-xl group'>
+                    className='hover:bg-darkmode bg-white rounded-3xl p-8 shadow-xl group dark:bg-transparent dark:group-hover:bg-darkmode'>
                     <h5 className='group-hover:text-white mb-5'>
                       {item.heading}
                     </h5>
@@ -61,7 +61,7 @@ const Aboutus = () => {
                       height={100}
                       className='mb-5'
                     />
-                    <p className='text-lg font-normal text-black group-hover:text-white mb-5'>
+                    <p className='text-lg font-normal text-black dark:text-white/80 group-hover:text-white mb-5'>
                       {item.paragraph}
                     </p>
                     <Link

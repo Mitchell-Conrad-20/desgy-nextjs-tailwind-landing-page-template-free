@@ -76,7 +76,7 @@ const Work = () => {
       className="relative dark:bg-darkmode py-4 bg-cover bg-center overflow-hidden before:absolute before:w-full before:h-full before:bg-[url('/images/wework/elipse.svg')] before:bg-no-repeat before:bg-center after:absolute after:w-1/3 after:h-1/3 after:bg-[url('/images/wework/vector.svg')] after:bg-no-repeat after:top-28 after:-right-12 after:-z-10">
       <div className='container mx-auto max-w-7xl px-4'>
         <div className='text-center overflow-hidden'>
-          <h3 className='text-black my-5'>
+          <h3 className='text-black dark:text-white my-5'>
             We work in several verticals.
           </h3>
         </div>
@@ -106,10 +106,10 @@ const Work = () => {
                       />
                     </div>
                   </div>
-                  <h6 className='text-xl text-black dark:text-white font-bold pt-14'>
+                  <h6 className='text-xl text-black font-bold pt-14'>
                     {items.name}
                   </h6>
-                  <p className='text-base dark:text-white font-normal pt-4 pb-2'>
+                  <p className='text-base text-black font-normal pt-4 pb-2'>
                     {items.profession}
                   </p>
                 </div>

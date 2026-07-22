@@ -39,14 +39,14 @@ const SignUp = () => {
 
   return (
     <>
-      <div className='mb-10 text-center mx-auto inline-block max-w-[160px]'>
+      <div className='mb-10 text-center mx-auto inline-block max-w-[160px] text-slate-900'>
         <Logo />
       </div>
 
       <SocialSignUp />
 
       <span className="z-1 relative my-8 block text-center before:content-[''] before:absolute before:h-px before:w-40% before:bg-dark_border/60 before:left-0 before:top-3 after:content-[''] after:absolute after:h-px after:w-40% after:bg-dark_border/60 after:top-3 after:right-0">
-        <span className='text-body-secondary relative z-10 inline-block px-3 text-base text-darkmode'>
+        <span className='text-body-secondary relative z-10 inline-block px-3 text-base text-slate-600'>
           OR
         </span>
       </span>
@@ -58,7 +58,7 @@ const SignUp = () => {
             placeholder='Name'
             name='name'
             required
-            className='w-full rounded-md border border-dark_border/60 border-solid bg-transparent px-5 py-3 text-base text-dark outline-hidden transition border-darkmode placeholder:text-darkmode focus:border-darkmode focus-visible:shadow-none text-darkmode dark:focus:border-darkmode'
+            className='w-full rounded-md border border-slate-300 border-solid bg-transparent px-5 py-3 text-base text-slate-900 outline-hidden transition placeholder:text-slate-500 focus:border-slate-400 focus-visible:shadow-none'
           />
         </div>
         <div className='mb-[22px]'>
@@ -67,7 +67,7 @@ const SignUp = () => {
             placeholder='Email'
             name='email'
             required
-            className='w-full rounded-md border border-dark_border/60 border-solid bg-transparent px-5 py-3 text-base text-dark outline-hidden transition border-darkmode placeholder:text-darkmode focus:border-darkmode focus-visible:shadow-none text-darkmode dark:focus:border-darkmode'
+            className='w-full rounded-md border border-slate-300 border-solid bg-transparent px-5 py-3 text-base text-slate-900 outline-hidden transition placeholder:text-slate-500 focus:border-slate-400 focus-visible:shadow-none'
           />
         </div>
         <div className='mb-[22px]'>
@@ -76,7 +76,7 @@ const SignUp = () => {
             placeholder='Password'
             name='password'
             required
-            className='w-full rounded-md border border-dark_border/60 border-solid bg-transparent px-5 py-3 text-base text-dark outline-hidden transition border-darkmode placeholder:text-darkmode focus:border-darkmode focus-visible:shadow-none text-darkmode dark:focus:border-darkmode'
+            className='w-full rounded-md border border-slate-300 border-solid bg-transparent px-5 py-3 text-base text-slate-900 outline-hidden transition placeholder:text-slate-500 focus:border-slate-400 focus-visible:shadow-none'
           />
         </div>
         <div className='mb-9'>
@@ -88,7 +88,7 @@ const SignUp = () => {
         </div>
       </form>
 
-      <p className='text-body-secondary mb-4 text-black text-base'>
+      <p className='text-body-secondary mb-4 text-slate-700 text-base'>
         By creating an account you are agree with our{' '}
         <a href='/#' className='text-primary hover:underline'>
           Privacy
@@ -99,7 +99,7 @@ const SignUp = () => {
         </a>
       </p>
 
-      <p className='text-body-secondary text-black text-base'>
+      <p className='text-body-secondary text-slate-700 text-base'>
         Already have an account?
         <Link href='/' className='pl-2 text-primary hover:underline'>
           Sign In
