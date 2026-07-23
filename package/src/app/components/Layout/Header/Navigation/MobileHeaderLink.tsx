@@ -36,7 +36,7 @@ const MobileHeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
         )}
       </Link>
       {submenuOpen && item.submenu && (
-        <div className="bg-white dark:bg-darklight p-2 w-full">
+        <div className="bg-white dark:bg-[var(--color-dark-card)] p-2 w-full">
           {item.submenu.map((subItem, index) => (
             <Link
               key={index}

@@ -7,6 +7,7 @@ import { featureddata } from '@/app/types/featureddata'
 import { testimonials } from '@/app/types/testimonials'
 import { articles } from '@/app/types/articles'
 import { footerlinks } from '@/app/types/footerlinks'
+import { siteThemeConfig } from '@/app/api/data/config'
 
 // header nav-links data
 const headerData: HeaderItem[] = [
@@ -296,5 +297,6 @@ export const GET = () => {
     TestimonialsData,
     ArticlesData,
     FooterLinksData,
+    themeConfig: siteThemeConfig,
   })
 }

@@ -87,7 +87,7 @@ const Work = () => {
           ? Array.from({ length: 5 }).map((_, i) => <WorkSkeleton key={i} />)
           : work.map((items, i) => (
               <div key={i}>
-                <div className='bg-white dark:bg-darkHeroBg m-3 py-14 my-10 text-center shadow-xl rounded-3xl'>
+                <div className='bg-white m-3 py-14 my-10 text-center shadow-xl rounded-3xl'>
                   <div className='relative'>
                     <Image
                       src={items.imgSrc}

@@ -62,7 +62,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ items }) => {
 
   return (
     <div className='relative py-10'>
-      <div className='bg-white dark:bg-darkHeroBg shadow-testimonial m-3 p-10 rounded-3xl'>
+      <div className='bg-white  shadow-testimonial m-3 p-10 rounded-3xl'>
         <Image
           src={items.imgSrc}
           alt={`${items.name} - ${items.profession} testimonial image`}

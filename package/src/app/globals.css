@@ -104,7 +104,12 @@ html {
 }
 
 body {
-  @apply dark:bg-slate-900 dark:text-white;
+  @apply bg-white text-slate-900;
+}
+
+html.dark body {
+  @apply text-white;
+  background-color: var(--color-dark-surface, #0b1324);
 }
 
 .bg-joinus {
